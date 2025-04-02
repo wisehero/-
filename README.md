@@ -91,7 +91,7 @@
 
 ### 포인트 조회 API
 
-> ![](https: //img.shields.io/static/v1?label=&message=GET&color=blue) <br>
+> ![](https://img.shields.io/static/v1?label=&message=GET&color=blue) <br>
 > `/api/v1/points?userId={
 userId
 }`
