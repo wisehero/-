@@ -8,8 +8,6 @@
 
 ## Point
 
----
-
 ### 포인트 충전 API
 
 > ![](https://img.shields.io/static/v1?label=&message=POST&color=brightgreen) <br>
