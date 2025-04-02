@@ -21,10 +21,10 @@
 
 **Body**
 
-|     필드명      | 데이터 타입 |        설명         |  필수여부  | 유효성 검사                |
-|:------------:|:------:|:-----------------:|:------:|:----------------------|
-|    userId    | Number | 포인트를 충전하는 사용자 식별자 | **필수** | 양의 정수                 | 
-| chargeAmount | Number |  충전하고자 하는 포인트 금액  | **필수** | 0보다 크면서 1,000,000원 이하 |
+|      필드명       | 데이터 타입 |        설명         |  필수여부  | 유효성 검사                |
+|:--------------:|:------:|:-----------------:|:------:|:----------------------|
+|    `userId`    | Number | 포인트를 충전하는 사용자 식별자 | **필수** | 양의 정수                 | 
+| `chargeAmount` | Number |  충전하고자 하는 포인트 금액  | **필수** | 0보다 크면서 1,000,000원 이하 |
 
 **Example Reuqest Body**
 
@@ -40,13 +40,13 @@
 <details markdown="1">
 <summary>200 OK : 성공적으로 충전된 경우</summary>
 
-|     필드명      | 데이터 타입 |     설명     |
-|:------------:|:------:|:----------:|
-|     code     | Number | HTTP 상태 코드 |
-|   message    | String | 요청 처리 메시지  |
-|     data     | Object |   응답 데이터   |
-| data.userId  | Number | 충전된 사용자 ID |
-| data.balance | Number |  충전 후 잔액   |
+|      필드명       | 데이터 타입 |     설명     |
+|:--------------:|:------:|:----------:|
+|     `code`     | Number | HTTP 상태 코드 |
+|   `message`    | String | 요청 처리 메시지  |
+|     `data`     | Object |   응답 데이터   |
+| `data.userId`  | Number | 충전된 사용자 ID |
+| `data.balance` | Number |  충전 후 잔액   |
 
 ```json
 {
@@ -104,22 +104,22 @@ userId
 
 **Query Params**
 
-|  필드명   | 데이터 타입 |        설명        |  필수여부  | 유효성 검사 |
-|:------:|:------:|:----------------:|:------:|:-------|
-| userId | Number | 포인트를 조회하는 사용자 ID | **필수** | 양의 정수  |
+|   필드명    | 데이터 타입 |        설명        |  필수여부  | 유효성 검사 |
+|:--------:|:------:|:----------------:|:------:|:-------|
+| `userId` | Number | 포인트를 조회하는 사용자 ID | **필수** | 양의 정수  |
 
 #### Response
 
 <details markdown="1">
 <summary>200 OK: 성공적으로 조회된 경우</summary>
 
-|     필드명      | 데이터 타입 |     설명     |
-|:------------:|:------:|:----------:|
-|     code     | Number | HTTP 상태 코드 |
-|   message    | String | 요청 처리 메시지  |
-|     data     | Object |   응답 데이터   |
-| data.userId  | Number | 조회된 사용자 ID |
-| data.balance | Number |   조회된 잔액   |
+|      필드명       | 데이터 타입 |     설명     |
+|:--------------:|:------:|:----------:|
+|     `code`     | Number | HTTP 상태 코드 |
+|   `message`    | String | 요청 처리 메시지  |
+|     `data`     | Object |   응답 데이터   |
+| `data.userId`  | Number | 조회된 사용자 ID |
+| `data.balance` | Number |   조회된 잔액   |
 
 ```json
 {
@@ -147,9 +147,9 @@ userId
 
 #### Body
 
-|   필드명   | 데이터 타입 |       설명       |  필수여부  | 유효성 검사 |
-|:-------:|:------:|:--------------:|:------:|:-------|
-| orderId | Number | 사용자가 주문한 주문 ID | **필수** | 양의 정수  |
+|    필드명    | 데이터 타입 |       설명       |  필수여부  | 유효성 검사 |
+|:---------:|:------:|:--------------:|:------:|:-------|
+| `orderId` | Number | 사용자가 주문한 주문 ID | **필수** | 양의 정수  |
 
 **Example Request Body**
 
@@ -209,16 +209,16 @@ userId
 <details markdown="1">
 <summary>200 OK : 성공적으로 조회된 경우</summary>
 
-|      필드명      | 데이터 타입 |     설명     |
-|:-------------:|:------:|:----------:|
-|     code      | Number | HTTP 상태 코드 |
-|    message    | String | 요청 처리 메시지  |
-|     data      | Object |   응답 데이터   |
-| data.products | Array  |   상품 목록    |
-|  product.id   | Number |   상품 ID    |
-| product.name  | String |   상품 이름    |
-| product.price | Number |   상품 가격    |
-| product.stock | Number |   상품 재고    |
+|       필드명        | 데이터 타입 |     설명     |
+|:----------------:|:------:|:----------:|
+|      `code`      | Number | HTTP 상태 코드 |
+|    `message`     | String | 요청 처리 메시지  |
+|      `data`      | Object |   응답 데이터   |
+| `data.products`  | Array  |   상품 목록    |
+|   `product.id`   | Number |   상품 ID    |
+|  `product.name`  | String |   상품 이름    |
+| `product.price`  | Number |   상품 가격    |
+| `product.stock ` | Number |   상품 재고    |
 
 ```json
 {
@@ -433,9 +433,9 @@ userId
 
 **Query Params**
 
-|  필드명   | 데이터 타입 |       설명        |  필수여부  | 유효성 검사 |
-|:------:|:------:|:---------------:|:------:|:-------|
-| userId | Number | 쿠폰을 조회하는 사용자 ID | **필수** | 양의 정수  |
+|   필드명    | 데이터 타입 |       설명        |  필수여부  | 유효성 검사 |
+|:--------:|:------:|:---------------:|:------:|:-------|
+| `userId` | Number | 쿠폰을 조회하는 사용자 ID | **필수** | 양의 정수  |
 
 <details markdown="1">
 <summary>200 OK : 성공적으로 조회된 경우</summary>
@@ -497,10 +497,10 @@ userId
 
 **Body**
 
-|   필드명    | 데이터 타입 |       설명        |  필수여부  | 유효성 검사 |
-|:--------:|:------:|:---------------:|:------:|:-------|
-|  userId  | Number | 쿠폰을 발급받는 사용자 ID | **필수** | 양의 정수  |
-| couponId | Number |   발급받을 쿠폰 ID    | **필수** | 양의 정수  |
+|    필드명     | 데이터 타입 |       설명        |  필수여부  | 유효성 검사 |
+|:----------:|:------:|:---------------:|:------:|:-------|
+|  `userId`  | Number | 쿠폰을 발급받는 사용자 ID | **필수** | 양의 정수  |
+| `couponId` | Number |   발급받을 쿠폰 ID    | **필수** | 양의 정수  |
 
 **Example Request Body**
 
@@ -535,6 +535,7 @@ userId
   "detail": "쿠폰의 잔여 수량이 부족합니다."
 }
 ```
+
 </details>
 
 <details markdown="1">
