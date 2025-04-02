@@ -92,9 +92,7 @@
 ### 포인트 조회 API
 
 > ![](https://img.shields.io/static/v1?label=&message=GET&color=blue) <br>
-> `/api/v1/points?userId={
-userId
-}`
+> `/api/v1/points?userId={userId}`
 
 <details markdown="1">
 
@@ -250,7 +248,7 @@ userId
 ### 최근 3일간 가장 많이 팔린 인기 상품 5개 조회 API
 
 > ![](https://img.shields.io/static/v1?label=&message=GET&color=blue) <br>
-> /api/v1/products/best
+> `/api/v1/products/best`
 
 <details markdown="1">
 <summary>스펙 상세</summary>
